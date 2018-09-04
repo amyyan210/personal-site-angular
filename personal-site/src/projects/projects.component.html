@@ -2,141 +2,29 @@
 
     <div class="row">
 
-        <div class="column col-xs-12 col-sm-6">
+        <div *ngFor="let type of ['Tech', 'Other']" class="column col-xs-12 col-sm-6">
 
-            <h2 class="text-center">Tech Projects</h2>
+            <h2 class="text-center">{{type}} Projects</h2>
 
             <div class="row">
 
                 <div *ngFor="let project of projects" class="project-container col-xs-12 col-sm-12 col-md-6 text-center">
-                    <a href="{{project.site}}" target="_blank">
+                  <div *ngIf="project.type == type">
+                    <a href="{{project.site || project.github}}" target="_blank">
                       <img src="{{project.img}}" alt="{{project.name}}" class="image">
                     </a>
                     <div class="middle">
-                        <a href="{{project.site}}" target="_blank">
-                            <div class="text">See it</div></a>
+                        <a *ngIf="project.site" href="{{project.site}}" target="_blank" >
+                            <div class="text cta">See it</div>
+                        </a>
+                        <a *ngIf="project.github" href="{{project.github}}" target="_blank">
+                          <div class="text">See code</div>
+                        </a>
                     </div>
-                </div>
-
-                <!-- <div class="project-container col-xs-12 col-sm-12 col-md-6 text-center">
-                    <a href="https://www.inspirationcamps.org" target="_blank"><img src="img/inspiration.png" alt="Inspiration Camps" class="image"></a>
-                    <div class="middle">
-                        <a href="https://www.inspirationcamps.org" target="_blank">
-                            <div class="text">See it</div></a>
-                    </div>
-                </div>
-
-                <div class="project-container col-xs-12 col-sm-12 col-md-6 text-center">
-                    <a href="http://www.remindr.life" target="_blank"><img src="img/remindr.png" alt="remindr.life" class="image"></a>
-                    <div class="middle">
-                        <a href="http://www.remindr.life" target="_blank">
-                            <div class="text">Try it</div></a>
-                        <br>
-                        <a href="https://github.com/SweetJandy/Remindr" target="_blank">
-                            <div class="text">See code</div></a>
-                    </div>
-                </div> -->
-
-            </div>
-
-            <!-- <div class="row">
-
-                <div class="project-container col-xs-12 col-sm-12 col-md-6 text-center">
-                    <a href="https://github.com/brauly/adlister" target="_blank"><img src="img/spooklist.png" alt="Spooklist" class="image"></a>
-                    <div class="middle">
-                        <a href="https://github.com/brauly/adlister" target="_blank">
-                            <div class="text">See code</div></a>
-                    </div>
-                </div>
-
-                <div class="project-container col-xs-12 col-sm-12 col-md-6 text-center">
-                    <a href="phone-book.jar" target="_blank"><img src="img/phone-book.png" alt="Phone book" class="image"></a>
-                    <div class="middle">
-                        <a href="phone-book.jar" target="_blank">
-                            <div class="text">Try it</div></a>
-                        <br>
-                        <a href="https://github.com/amyyan210/phone-book" target="_blank">
-                            <div class="text">See code</div></a>
-                    </div>
-                <p class="text-center" id="run-instructions">*Download and run <code>java -jar phone-book.jar</code> in terminal</p>
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="project-container col-xs-12 col-sm-12 col-md-6 text-center">
-                    <a href="https://github.com/movie-api/bramy" target="_blank"><img src="img/movies.jpg" alt="Movie database" class="image"></a>
-                    <div class="middle">
-                        <a href="https://github.com/movie-api/bramy" target="_blank">
-                            <div class="text">See code</div></a>
-                    </div>
-                </div>
-
-                <div class="project-container col-xs-12 col-sm-12 col-md-6 text-center">
-                    <a href="weather_api/weather_map.html" target="_blank"><img src="img/weather.jpg" alt="Weather forecast" class="image"></a>
-                    <div class="middle">
-                        <a href="weather_api/weather_map.html" target="_blank">
-                            <div class="text">Try it</div></a>
-                        <br>
-                        <a href="https://github.com/PairCoding/Amy_Edward/tree/weather-api" target="_blank">
-                            <div class="text">See code</div></a>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="project-container col-xs-12 col-sm-12 col-md-6 text-center">
-                    <a href="calculator-project/calculator.html" target="_blank"><img src="img/calculator.png" alt="Calculator" class="image"></a>
-                    <div class="middle">
-                        <a href="calculator-project/calculator.html" target="_blank">
-                            <div class="text">Try it</div></a>
-                        <br>
-                        <a href="https://github.com/calculator-project/calculator-project" target="_blank">
-                            <div class="text">See code</div></a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="column col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-
-            <h2 class="text-center">Other Projects</h2>
-
-            <div class="row">
-
-                <div class="project-container col-xs-12 col-sm-12 col-md-6 text-center">
-                    <a href="https://uh-ir.tdl.org/uh-ir/bitstream/handle/10657/1150/YANAWAY-THESIS-2015.pdf?sequence=1&isAllowed=y" target="_blank"><img src="img/thesis.png" alt="Thesis" class="image"></a>
-                    <div class="middle">
-                        <a href="https://uh-ir.tdl.org/uh-ir/bitstream/handle/10657/1150/YANAWAY-THESIS-2015.pdf?sequence=1&isAllowed=y" target="_blank">
-                        <div class="text">Master's Thesis</div></a>
-                    </div>
-                </div>
-
-                <div class="project-container col-xs-12 col-sm-12 col-md-6 text-center">
-                    <a href="https://youtu.be/VjbkGdkpm4w" target="_blank"><img src="img/variations.png" alt="Variations" class="image"></a>
-                    <div class="middle">
-                        <a href="https://youtu.be/VjbkGdkpm4w" target="_blank">
-                        <div class="text">Composition</div></a>
-                    </div>
+                    <p *ngIf="project.special" class="text-center" id="run-instructions">*Download and run <code>java -jar phone-book.jar</code> in terminal</p>
+                  </div>
                 </div>
             </div>
-
-            <div class="row">
-
-                <div class="project-container col-xs-12 col-sm-12 col-md-6 text-center">
-                    <a href="https://youtu.be/9DvNEo_X-7A" target="_blank"><img src="img/saudades.png" alt="Saudades" class="image"></a>
-                    <div class="middle">
-                        <a href="https://youtu.be/9DvNEo_X-7A" target="_blank">
-                        <div class="text">Arrangement</div></a>
-                    </div>
-                </div>
-
-            </div> -->
 
         </div>
 
