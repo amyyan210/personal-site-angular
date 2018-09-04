@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  constructor() { }
+
+  ngOnInit() { }
+
   title = 'personal-site';
 
   $(document).ready(function() {
@@ -13,7 +18,7 @@ export class AppComponent {
     // Calculates left margin
   function calculateLeftMargin (element) {
     return ($(element).outerWidth(true) - $(element).outerWidth()) / 2;
-}
+  }
 
 // Event listener to resize photo
 var photoResize = function(){

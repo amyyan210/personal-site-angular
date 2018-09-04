@@ -20,8 +20,6 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <!-- <link rel="stylesheet" href="app.component.css"> -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Home</title>
@@ -35,11 +33,11 @@
         <div class="container-fluid">
             <div class="navbar-header text-center">
                 <div class="name small-name hidden-sm hidden-md hidden-lg hidden-xl">
-                    <a [routerLink]="['../index.html']" routerLinkActive="router-link-active">
-                    <span class="name">
-                      <span class="firstName">Amy</span> Yanaway
-                    </span>
-                  </a>
+                    <a [routerLink]="['']" routerLinkActive="router-link-active">
+                      <span class="name">
+                        <span class="firstName">Amy</span> Yanaway
+                      </span>
+                    </a>
                 </div>
                 <button type="button" class="navbar-toggle collapsed hidden-sm hidden-md hidden-lg hidden-xl" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
@@ -52,22 +50,37 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-left">
                     <li class="hidden-xs">
-                      <a href="index.html">
+                      <a [routerLink]="['']" routerLinkActive="router-link-active">
                         <span class="name">
                           <span class="firstName">Amy</span> Yanaway
                         </span>
                       </a>
                       <span class="sr-only">(current)</span>
                     </li>
-                    <li><a href="resume.html">Resume </a></li>
-                    <li><a href="projects.html">Projects </a></li>
+                    <li>
+                      <a [routerLink]="['/resume']">Resume </a>
+                    </li>
+                    <li>
+                      <a [routerLink]="['/projects']">Projects </a>
+                    </li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="mailto:amy@yanaway.com"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
+                    <li>
+                      <a href="mailto:amy@yanaway.com">
+                        <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
+                      </a>
                     </li>
-                    <li><a href="https://github.com/amyyan210" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/amy-yanaway-0a0a9b92" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
+                    <li>
+                      <a href="https://github.com/amyyan210" target="_blank">
+                        <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.linkedin.com/in/amy-yanaway-0a0a9b92" target="_blank">
+                        <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+                      </a>
+                    </li>
                 </ul>
 
             </div>
@@ -77,26 +90,7 @@
 </header>
 
 <main>
-
-    <div id="hidden-pictures">
-    </div>
-
-    <div class="main container-fluid">
-        <div class="home-page row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 img-and-pointer">
-                <span class="pulse"><img id="pointer" src="../assets/img/point2.png"></span>
-                <img class="img-responsive personal-photo" id="photos" src="../assets/img/myself-transparent.png" alt="personal photo">
-            </div>
-
-        <div class="home-text text-center col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <p class="codeup"><a href="http://www.codeup.com" target="_blank">Codeup</a> graduate</p><hr>
-            <p>Full stack software developer</p><hr>
-            <p>Background in music theory, teaching, and administration</p>
-        </div>
-
-        </div>
-    </div>
-
+    <router-outlet></router-outlet>
 </main>
 
 <p class="footer text-center">Created from scratch by Amy Yanaway</p>
@@ -106,8 +100,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-
-<!-- <script src="app.component.ts"></script> -->
 
 </body>
 </html>
