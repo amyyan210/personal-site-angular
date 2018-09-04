@@ -1,0 +1,309 @@
+html, body {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 3px;
+  background-color: #C6E5D9;
+}
+
+body {
+  padding-top: 70px;
+}
+
+.footer {
+  padding: 10px;
+  font-size: 0.75em;
+}
+
+.navbar-collapse {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+
+}
+
+.navbar-nav>li>a:first-child {
+  padding-left:0;
+}
+
+.navbar {
+  background-color: #C6E5D9;
+  border: none;
+  margin-bottom: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar-left li {
+  font-size: 16px;
+  color: #C6A49A;
+}
+
+.firstName {
+  font-size: 75%;
+}
+
+.name {
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: black;
+}
+
+.small-name {
+  display: inline;
+  color:black;
+}
+
+.navbar-toggle {
+  /* To not take up space for centered header */
+  margin-left: -59px;
+  display:block;
+  vertical-align: middle;
+  margin-right: auto;
+}
+
+#hidden-pictures {
+  display: none;
+}
+
+.main p {
+  font-size: 2em;
+  font-weight: 200;
+}
+
+.codeup a {
+  text-decoration: none;
+  color: #E94E77;
+}
+
+#pointer {
+  opacity: 0.5;
+}
+
+.pulse {
+  position: absolute;
+  z-index: 3;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  /*background: #F4EAD5;*/
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+  animation: pulse 2s infinite;
+}
+.pulse:hover {
+  animation: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+
+
+/*Fade on click */
+/*#a-image, #b-image {*/
+  /*background-image: url('../img/myself.jpg');*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: 100%;*/
+  /*position: absolute;*/
+/*}*/
+/*#b-image {*/
+  /*z-index:2;*/
+/*}*/
+/*#a-image {*/
+  /*z-index:1;*/
+/*}*/
+
+/***/
+
+.personal-photo {
+  position: relative;
+  z-index:1;
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+  margin-bottom:30px;
+  cursor: pointer;
+}
+
+#photos {
+  background-image: url("../assets/img/myself.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.home-text p {
+  padding-left:50px;
+  padding-right:50px;
+}
+
+.home-text p:last-child {
+  padding-bottom:30px;
+}
+
+.text {
+  color: #D68189;
+  font-size: 1.5em;
+  padding: 16px 32px;
+  text-decoration: none;
+}
+
+.resume {
+  display: inline;
+  width: 60%;
+  min-width: 500px;
+  height: 100vh;
+}
+
+.resume-body {
+  text-align: center;
+  /*transform: scale(2, 2);*/
+  /*transform-origin: top;*/
+}
+
+#download {
+  display: block;
+  margin: 10px auto;
+}
+
+.middle a:hover, .middle a:active:hover, .middle a:visited:hover {
+  text-decoration: none;
+}
+
+.project-container {
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.project-container .image {
+  opacity: 1;
+}
+
+
+.project-container:hover .image {
+  opacity: 0.3;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.text {
+  background-color: #D68189;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  text-decoration: none;
+}
+
+#run-instructions {
+  padding-bottom: 40px;
+}
+
+@media screen and (min-width: 1200px) {
+  .personal-photo {
+      max-height: 80%;
+  }
+}
+
+/* For md screens and up */
+@media screen and (min-width: 992px) {
+
+  .home-page {
+      display: flex;
+      align-items: center;
+  }
+
+}
+
+
+/* For sm (769) and up */
+@media screen and (min-width: 769px) {
+
+  .project-container:hover .middle {
+      opacity: 1;
+  }
+
+  .project-container .middle {
+      opacity: 0;
+  }
+
+}
+
+/* For xs screens */
+@media screen and (max-width: 767px) {
+  /* To avoid crashing into hamburger menu on smaller screens*/
+  .name {
+      font-size: 1.5em;
+  }
+
+  .firstName {
+      font-size: .7em;
+  }
+
+  .home-text p {
+      font-size: 1.5em;
+  }
+
+  .text {
+      font-size: 1.5em;
+  }
+
+  .image {
+      max-width:80%;
+      margin: 0 auto;
+  }
+}
+
+/* Screens that can't hover (xs and small) */
+@media screen and (max-width: 768px) {
+
+  .project-container .middle {
+      opacity: 1;
+  }
+
+}
